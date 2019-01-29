@@ -1,0 +1,27 @@
+{
+  "name": "hapijs-boilerplate",
+  "version": "1.0.0",
+  "description": "Hapi.js boilerplate",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItEngine/hapijs-boilerplate.git"
+  },
+  "author": "Martín Peveri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ItEngine/hapijs-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ItEngine/hapijs-boilerplate#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "handlebars": "^4.0.12",
+    "hapi": "^18.0.0",
+    "nodemon": "^1.18.9",
+    "vision": "^5.4.4"
+  }
+}
