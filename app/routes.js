@@ -6,9 +6,7 @@ const pluginRoutes = {
     server.route({
       method: 'GET',
       path: '/',
-      handler: (request, h) => {
-        return h.view('index');
-      },
+      handler: (request, h) => h.view('index'),
     });
   },
 };

@@ -4,8 +4,11 @@
   "description": "Hapi.js boilerplate",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production node app.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon app.js",
+    "lint": "eslint .",
+    "test": "npm run unit",
+    "unit": "nyc mocha -R spec test/unit/specs/*.js --exit"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,20 @@
     "dotenv": "^6.2.0",
     "handlebars": "^4.0.12",
     "hapi": "^18.0.0",
-    "nodemon": "^1.18.9",
     "vision": "^5.4.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "nyc": "^13.1.0",
+    "sinon": "^7.2.3"
   }
 }
